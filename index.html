@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Xelnova: Explore a Multi-Category Online Marketplace in India</title>
+<meta name="description" content="Explore About Xelnova, a multi-category online marketplace in India offering electronics, fashion, home, beauty, wellness, and everyday essentials in one place.">
+<meta name="keywords" content="About Xelnova, Xelnova Marketplace, Xelnova Online Shopping, Multi-Category Online Marketplace, Xelnova India, Online Shopping Platform India, Indian Online Marketplace, Electronics Online India, Fashion Shopping Online India, Home and Kitchen Products Online, Beauty and Personal Care Online, Health and Wellness Products Online, Office Stationery Online India, Everyday Essentials Online Shopping, Shop Online at Xelnova, Explore Xelnova Marketplace, Xelnova Shopping Platform, Buy Products Online India, Multi-Category Shopping Website India, Xelnova E-commerce Platform">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+  :root{
+    --navy-950:#080e18;
+    --navy-900:#0c1524;
+    --navy-800:#121e33;
+    --navy-700:#1b2c47;
+    --gold:#f2a63d;
+    --orange:#e8672c;
+    --cream:#faf6ef;
+    --ink:#0c1524;
+    --slate:#5b6472;
+    --line:rgba(255,255,255,0.09);
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    font-family:'Inter',sans-serif;
+    background:var(--cream);
+    color:var(--ink);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3,.logo{font-family:'Sora',sans-serif;}
+
+  a{color:inherit;text-decoration:none;}
+  ul{list-style:none;}
+  img{max-width:100%;display:block;}
+
+  .grad-text{
+    background:linear-gradient(90deg,var(--gold),var(--orange));
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+  }
+
+  .wrap{
+    max-width:1160px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+
+  /* ---------- NAV ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:var(--navy-950);
+    border-bottom:1px solid var(--line);
+  }
+  nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 0;
+  }
+  .logo{font-size:24px; font-weight:800; letter-spacing:-0.02em; color:#fff;}
+  .logo span{color:var(--gold);}
+  .nav-links{display:flex; gap:34px; font-size:14.5px; font-weight:500; color:#c9d0dc;}
+  .nav-links a{transition:color .2s;}
+  .nav-links a:hover{color:var(--gold);}
+  .nav-cta{
+    background:linear-gradient(90deg,var(--gold),var(--orange));
+    color:var(--navy-950); font-weight:700; font-size:14px;
+    padding:10px 22px; border-radius:999px;
+  }
+  .burger{display:none; flex-direction:column; gap:5px; cursor:pointer;}
+  .burger span{width:24px; height:2px; background:#fff;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:radial-gradient(ellipse 90% 60% at 30% 0%, #182741 0%, var(--navy-950) 60%);
+    color:#fff;
+    position:relative;
+    overflow:hidden;
+    padding:96px 0 130px;
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:
+      radial-gradient(circle at 82% 18%, rgba(242,166,61,0.16), transparent 40%),
+      radial-gradient(circle at 92% 55%, rgba(232,103,44,0.12), transparent 45%);
+    pointer-events:none;
+  }
+  .hero-inner{position:relative; display:flex; align-items:center; gap:60px;}
+  .hero-copy{flex:1.1;}
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:13px; font-weight:600; letter-spacing:.06em; text-transform:uppercase;
+    color:var(--gold);
+    border:1px solid rgba(242,166,61,0.35);
+    padding:7px 16px; border-radius:999px;
+    margin-bottom:26px;
+  }
+  .eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);}
+  .hero h1{
+    font-size:clamp(34px,4.4vw,54px);
+    font-weight:800; letter-spacing:-0.02em; line-height:1.08;
+    margin-bottom:22px;
+  }
+  .hero p{
+    font-size:17px; color:#aab4c4; max-width:520px; margin-bottom:34px;
+  }
+  .hero-actions{display:flex; gap:16px; flex-wrap:wrap;}
+  .btn-primary{
+    background:linear-gradient(90deg,var(--gold),var(--orange));
+    color:var(--navy-950); font-weight:700; font-size:15px;
+    padding:14px 30px; border-radius:999px;
+    box-shadow:0 12px 30px -10px rgba(232,103,44,0.55);
+  }
+  .btn-ghost{
+    border:1px solid rgba(255,255,255,0.22); color:#fff; font-weight:600; font-size:15px;
+    padding:14px 28px; border-radius:999px;
+  }
+
+  /* hero visual: orbiting category tag cluster */
+  .hero-visual{flex:1; position:relative; height:420px; display:flex; align-items:center; justify-content:center;}
+  .orbit-core{
+    width:132px; height:132px; border-radius:50%;
+    background:linear-gradient(135deg,var(--gold),var(--orange));
+    display:flex; align-items:center; justify-content:center;
+    font-weight:800; color:var(--navy-950); font-size:15px; text-align:center; letter-spacing:-0.01em;
+    box-shadow:0 0 0 1px rgba(255,255,255,0.08), 0 30px 60px -15px rgba(232,103,44,0.6);
+    position:relative; z-index:3;
+    animation:core-pulse 4.5s ease-in-out infinite;
+  }
+  @keyframes core-pulse{
+    0%,100%{ box-shadow:0 0 0 1px rgba(255,255,255,0.08), 0 30px 60px -15px rgba(232,103,44,0.6); transform:scale(1); }
+    50%{ box-shadow:0 0 0 1px rgba(255,255,255,0.1), 0 34px 70px -12px rgba(242,166,61,0.75); transform:scale(1.035); }
+  }
+  .ring{
+    position:absolute; border:1px dashed rgba(255,255,255,0.16); border-radius:50%;
+  }
+  .ring.r1{width:280px;height:280px; animation:spin 60s linear infinite;}
+  .ring.r2{width:420px;height:420px; animation:spin-rev 90s linear infinite;}
+
+  .orbit{
+    position:absolute; inset:0;
+  }
+  .orbit-outer{width:400px; height:400px; margin:auto; position:absolute; inset:0; animation:spin 42s linear infinite;}
+  .orbit-inner{width:270px; height:270px; margin:auto; position:absolute; inset:0; animation:spin-rev 30s linear infinite;}
+
+  .orbit-item{
+    position:absolute; top:50%; left:50%;
+    width:0; height:0;
+  }
+  .orbit-item-inner{ position:absolute; }
+  .tag-spin{ position:absolute; }
+  .orbit-outer .tag-spin{ animation:spin-rev 42s linear infinite; }
+  .orbit-inner .tag-spin{ animation:spin 30s linear infinite; }
+  .tag{
+    position:absolute;
+    transform:translate(-50%,-50%);
+    background:var(--navy-800);
+    border:1px solid var(--line);
+    color:#e7ebf2;
+    font-size:12.5px; font-weight:600;
+    padding:9px 15px; border-radius:999px;
+    white-space:nowrap;
+  }
+
+  @keyframes spin{ from{transform:rotate(0deg);} to{transform:rotate(360deg);} }
+  @keyframes spin-rev{ from{transform:rotate(0deg);} to{transform:rotate(-360deg);} }
+
+  @media (prefers-reduced-motion: reduce){
+    .ring, .orbit-outer, .orbit-inner, .orbit-item .tag, .orbit-core{ animation:none !important; }
+  }
+
+  /* ---------- SECTION shell ---------- */
+  section{padding:88px 0;}
+  .section-head{max-width:680px; margin:0 auto 48px; text-align:center;}
+  .kicker{
+    font-size:12.5px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--orange); margin-bottom:14px;
+  }
+  .section-head h2{
+    font-size:clamp(26px,3vw,36px); font-weight:800; letter-spacing:-0.02em; color:var(--ink);
+    margin-bottom:16px;
+  }
+  .section-head p{color:var(--slate); font-size:16px;}
+
+  /* ---------- ABOUT ---------- */
+  .about{background:#fff;}
+  .about-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start;
+  }
+  .about-grid p{color:var(--slate); font-size:16px; margin-bottom:18px;}
+  .about-grid h3{font-size:22px; font-weight:700; margin-bottom:16px; color:var(--ink);}
+  .chip-row{display:flex; flex-wrap:wrap; gap:10px; margin-top:22px;}
+  .chip{
+    font-size:13px; font-weight:600; color:var(--orange);
+    background:#fdf0e2; border:1px solid #f6d9b6;
+    padding:8px 14px; border-radius:999px;
+  }
+
+  /* ---------- MARKETPLACE ---------- */
+  .marketplace{
+    background:var(--navy-950); color:#fff;
+  }
+  .marketplace .section-head h2{color:#fff;}
+  .marketplace .section-head p{color:#aab4c4;}
+  .mp-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:56px; align-items:center;}
+  .mp-copy p{color:#aab4c4; font-size:16px; margin-bottom:18px;}
+  .mp-list{
+    display:grid; grid-template-columns:1fr 1fr; gap:12px;
+  }
+  .mp-list li{
+    background:var(--navy-800); border:1px solid var(--line);
+    border-radius:12px; padding:14px 16px; font-size:14px; font-weight:500; color:#e7ebf2;
+  }
+
+  /* ---------- CATEGORIES ---------- */
+  .categories{background:var(--cream);}
+  .cat-grid{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:22px;
+  }
+  .cat-card{
+    background:#fff; border:1px solid #ece5d8; border-radius:18px;
+    padding:30px 24px; transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .cat-card:hover{transform:translateY(-6px); box-shadow:0 24px 40px -20px rgba(12,21,36,0.18);}
+  .cat-num{
+    font-family:'Sora',sans-serif; font-weight:800; font-size:13px; color:var(--orange);
+    margin-bottom:16px; letter-spacing:.04em;
+  }
+  .cat-card h3{font-size:18px; font-weight:700; margin-bottom:10px; color:var(--ink);}
+  .cat-card p{font-size:14px; color:var(--slate);}
+
+  /* ---------- PRODUCT SLIDER ---------- */
+  .products{background:#fff; overflow:hidden;}
+  .slider-shell{position:relative;}
+  .slider-track{
+    display:flex; gap:22px;
+    overflow-x:auto;
+    padding:6px 6px 18px;
+    scrollbar-width:none;
+    cursor:grab;
+  }
+  .slider-track::-webkit-scrollbar{display:none;}
+  .product-card{
+    flex:0 0 auto;
+    width:270px;
+    background:var(--cream);
+    border:1px solid #ece5d8;
+    border-radius:20px;
+    overflow:hidden;
+    display:flex; flex-direction:column;
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .product-card:hover{transform:translateY(-6px); box-shadow:0 26px 44px -22px rgba(12,21,36,0.2);}
+  .product-img{
+    width:100%; height:210px;
+    background:#fff;
+    display:flex; align-items:center; justify-content:center;
+    border-bottom:1px solid #ece5d8;
+  }
+  .product-img img{width:100%; height:100%; object-fit:contain; padding:14px;}
+  .product-info{padding:18px 18px 20px; display:flex; flex-direction:column; gap:14px; flex:1;}
+  .product-info h3{font-size:15px; font-weight:700; line-height:1.4; color:var(--ink); min-height:42px;}
+  .buy-now{
+    margin-top:auto;
+    display:inline-flex; align-items:center; justify-content:center;
+    background:linear-gradient(90deg,var(--gold),var(--orange));
+    color:var(--navy-950); font-weight:700; font-size:14px;
+    padding:11px 20px; border-radius:999px;
+  }
+  .slider-controls{display:flex; justify-content:center; gap:14px; margin-top:8px;}
+  .slider-btn{
+    width:42px; height:42px; border-radius:50%;
+    background:var(--navy-950); color:#fff;
+    display:flex; align-items:center; justify-content:center;
+    border:none; cursor:pointer; font-size:18px;
+    transition:background .2s;
+  }
+  .slider-btn:hover{background:var(--orange);}
+
+  /* ---------- REVIEWS ---------- */
+  .reviews{background:var(--navy-950); color:#fff; overflow:hidden;}
+  .reviews .section-head h2{color:#fff;}
+  .reviews .section-head p{color:#aab4c4;}
+  .review-track{
+    display:flex; gap:20px;
+    overflow-x:auto;
+    padding:6px 6px 6px;
+    scrollbar-width:none;
+    cursor:grab;
+  }
+  .review-track::-webkit-scrollbar{display:none;}
+  .review-card{
+    flex:0 0 auto; width:300px;
+    background:var(--navy-800); border:1px solid var(--line); border-radius:18px;
+    padding:26px; display:flex; flex-direction:column; gap:16px;
+  }
+  .review-quote{font-size:30px; color:var(--gold); line-height:1; font-family:Georgia, serif;}
+  .review-text{font-size:14.5px; color:#c7cedb; line-height:1.65;}
+  .review-person{display:flex; align-items:center; gap:12px; margin-top:auto;}
+  .review-avatar{
+    width:42px; height:42px; border-radius:50%; flex:0 0 auto;
+    background:linear-gradient(135deg,var(--gold),var(--orange));
+    display:flex; align-items:center; justify-content:center;
+    font-weight:700; color:var(--navy-950); font-size:13.5px;
+  }
+  .review-name{font-weight:600; font-size:14px; color:#fff;}
+  .review-role{font-size:12px; color:#8b93a3;}
+
+
+  .why{background:#fff;}
+  .why-grid{display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;}
+  .why-copy p{font-size:16px; color:var(--slate); margin-bottom:18px;}
+  .why-card{
+    background:var(--navy-950); color:#fff; border-radius:20px; padding:38px;
+    position:relative; overflow:hidden;
+  }
+  .why-card::after{
+    content:""; position:absolute; width:220px; height:220px; border-radius:50%;
+    background:radial-gradient(circle, rgba(242,166,61,0.25), transparent 70%);
+    top:-60px; right:-60px;
+  }
+  .why-card h4{font-size:15px; color:var(--gold); font-weight:700; margin-bottom:14px; letter-spacing:.02em;}
+  .why-card p{font-size:15px; color:#c7cedb; position:relative;}
+
+  /* ---------- FINAL ---------- */
+  .final{
+    background:linear-gradient(120deg,var(--navy-900),var(--navy-950));
+    color:#fff; text-align:center;
+  }
+  .final .wrap{max-width:760px;}
+  .final h2{font-size:clamp(26px,3.4vw,38px); font-weight:800; margin-bottom:20px; letter-spacing:-0.02em;}
+  .final p{color:#aab4c4; font-size:16px; margin-bottom:16px;}
+  .final .btn-primary{margin-top:18px; display:inline-block;}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--navy-950); color:#c9d0dc; padding:60px 0 30px; border-top:1px solid var(--line);}
+  .footer-grid{
+    display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:48px; margin-bottom:44px;
+  }
+  .footer-logo{font-size:24px; font-weight:800; color:#fff; margin-bottom:16px;}
+  .footer-logo span{color:var(--gold);}
+  .footer-grid > div p{font-size:14.5px; color:#9aa4b3; max-width:320px;}
+  .footer-col h4{font-size:13px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:#fff; margin-bottom:18px;}
+  .footer-col li{margin-bottom:12px; font-size:14.5px; color:#9aa4b3;}
+  .footer-col a:hover{color:var(--gold);}
+  .contact-row{display:flex; gap:10px; align-items:flex-start;}
+  .social-row{display:flex; gap:12px; margin-top:6px;}
+  .social-icon{
+    width:38px; height:38px; border-radius:50%;
+    background:var(--navy-800); border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center;
+    transition:background .2s, transform .2s;
+  }
+  .social-icon:hover{background:linear-gradient(135deg,var(--gold),var(--orange)); transform:translateY(-3px);}
+  .social-icon svg{width:17px; height:17px; fill:#fff;}
+  .footer-bottom{
+    border-top:1px solid var(--line); padding-top:24px;
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;
+    font-size:13px; color:#7a8496;
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:960px){
+    .nav-links, .nav-cta{display:none;}
+    .burger{display:flex;}
+    .hero-inner{flex-direction:column;}
+    .hero-visual{width:100%; height:340px; transform:scale(0.78);}
+    .about-grid, .mp-grid, .why-grid{grid-template-columns:1fr;}
+    .cat-grid{grid-template-columns:1fr 1fr;}
+    .footer-grid{grid-template-columns:1fr;}
+  }
+  @media (max-width:560px){
+    .cat-grid{grid-template-columns:1fr;}
+    .hero{padding:70px 0 90px;}
+    .tag{font-size:11px; padding:7px 12px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <div class="logo">Xel<span>nova</span></div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#marketplace">Marketplace</a>
+        <a href="#shop">Shop</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a href="#shop" class="nav-cta">Shop Now</a>
+      <div class="burger"><span></span><span></span><span></span></div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <div class="eyebrow">About Xelnova</div>
+      <h1>India's premium marketplace for <span class="grad-text">quality products.</span></h1>
+      <p>Discover authentic brands, unbeatable deals, and fast delivery. Xelnova is a multi-category online shopping platform that brings products from different areas together in one marketplace.</p>
+      <div class="hero-actions">
+        <a href="#categories" class="btn-primary">Explore Categories</a>
+        <a href="#contact" class="btn-ghost">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="ring r2"></div>
+      <div class="ring r1"></div>
+
+      <div class="orbit orbit-outer">
+        <div class="orbit-item" style="transform:rotate(-45deg) translateX(200px);">
+          <div class="orbit-item-inner" style="transform:rotate(45deg);">
+            <div class="tag-spin"><span class="tag">Electronics</span></div>
+          </div>
+        </div>
+        <div class="orbit-item" style="transform:rotate(45deg) translateX(200px);">
+          <div class="orbit-item-inner" style="transform:rotate(-45deg);">
+            <div class="tag-spin"><span class="tag">Fashion</span></div>
+          </div>
+        </div>
+        <div class="orbit-item" style="transform:rotate(135deg) translateX(200px);">
+          <div class="orbit-item-inner" style="transform:rotate(-135deg);">
+            <div class="tag-spin"><span class="tag">Beauty &amp; Personal Care</span></div>
+          </div>
+        </div>
+        <div class="orbit-item" style="transform:rotate(225deg) translateX(200px);">
+          <div class="orbit-item-inner" style="transform:rotate(-225deg);">
+            <div class="tag-spin"><span class="tag">Office &amp; Stationery</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="orbit orbit-inner">
+        <div class="orbit-item" style="transform:rotate(90deg) translateX(135px);">
+          <div class="orbit-item-inner" style="transform:rotate(-90deg);">
+            <div class="tag-spin"><span class="tag">Home &amp; Kitchen</span></div>
+          </div>
+        </div>
+        <div class="orbit-item" style="transform:rotate(210deg) translateX(135px);">
+          <div class="orbit-item-inner" style="transform:rotate(-210deg);">
+            <div class="tag-spin"><span class="tag">Health &amp; Wellness</span></div>
+          </div>
+        </div>
+        <div class="orbit-item" style="transform:rotate(330deg) translateX(135px);">
+          <div class="orbit-item-inner" style="transform:rotate(-330deg);">
+            <div class="tag-spin"><span class="tag">Footwear</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="orbit-core">Xelnova<br>Marketplace</div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">What Is Xelnova?</div>
+      <h2>A multi-category online shopping platform</h2>
+    </div>
+    <div class="about-grid">
+      <div>
+        <p>Xelnova is a multi-category online shopping platform that brings products from different areas together in one marketplace. Unlike platforms focused on only one type of product, Xelnova provides shoppers with a broader selection for different everyday requirements.</p>
+        <p>This multi-category approach gives customers the flexibility to explore products according to their changing needs instead of limiting their shopping journey to one specific product segment.</p>
+      </div>
+      <div>
+        <h3>Categories on Xelnova</h3>
+        <p>The marketplace includes categories such as electronics, fashion, home and kitchen, beauty and personal care, health and wellness, office and stationery, baby and kids, pet supplies, footwear, home improvement, and other everyday products.</p>
+        <div class="chip-row">
+          <span class="chip">Electronics</span>
+          <span class="chip">Fashion</span>
+          <span class="chip">Home &amp; Kitchen</span>
+          <span class="chip">Beauty &amp; Personal Care</span>
+          <span class="chip">Health &amp; Wellness</span>
+          <span class="chip">Office &amp; Stationery</span>
+          <span class="chip">Baby &amp; Kids</span>
+          <span class="chip">Pet Supplies</span>
+          <span class="chip">Footwear</span>
+          <span class="chip">Home Improvement</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="marketplace" id="marketplace">
+  <div class="wrap">
+    <div class="mp-grid">
+      <div class="mp-copy">
+        <div class="kicker">Xelnova Marketplace</div>
+        <h2 style="font-size:32px;font-weight:800;margin-bottom:18px;letter-spacing:-0.02em;">Built for product discovery and convenience</h2>
+        <p>The Xelnova Marketplace focuses on product discovery and convenience. Customers may visit the platform looking for one particular product, but having multiple categories available allows them to explore other useful items as well.</p>
+        <p>For example, someone searching for an electronic accessory may also need a home product, office item, personal-care accessory, or lifestyle product. A multi-category marketplace can make this process more convenient by bringing different shopping requirements into one online environment.</p>
+      </div>
+      <div>
+        <ul class="mp-list">
+          <li>Portable Printers</li>
+          <li>USB Storage Devices</li>
+          <li>Air-Quality Monitors</li>
+          <li>Fashion Products</li>
+          <li>Kitchen Accessories</li>
+          <li>Beauty Products</li>
+          <li>Home-Improvement Items</li>
+          <li>Footwear</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="categories" id="categories">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">What Products Can You Find on Xelnova?</div>
+      <h2>A broad product selection for everyday life</h2>
+      <p>The platform covers many of the products customers may need for work, study, home, personal use, and everyday activities.</p>
+    </div>
+    <div class="cat-grid">
+      <div class="cat-card">
+        <div class="cat-num">01</div>
+        <h3>Electronics &amp; Smart Products</h3>
+        <p>Customers may search for storage devices, portable printers, air-quality monitors, gadgets, and other accessories depending on their requirements.</p>
+      </div>
+      <div class="cat-card">
+        <div class="cat-num">02</div>
+        <h3>Fashion &amp; Accessories</h3>
+        <p>Customers can explore clothing, footwear, bags, jewellery, and other accessories for different occasions and everyday use.</p>
+      </div>
+      <div class="cat-card">
+        <div class="cat-num">03</div>
+        <h3>Home &amp; Kitchen</h3>
+        <p>Customers may look for kitchen accessories, home organization products, bathroom items, décor, and other household solutions.</p>
+      </div>
+      <div class="cat-card">
+        <div class="cat-num">04</div>
+        <h3>Beauty &amp; Personal Care</h3>
+        <p>This category can include products and accessories intended for skincare, grooming, haircare, and personal routines.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="products" id="shop">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Shop on Xelnova</div>
+      <h2>Handpicked from the marketplace</h2>
+    </div>
+    <div class="slider-shell">
+      <div class="slider-track" id="productSlider">
+
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://res.cloudinary.com/dgulzkcnq/image/upload/v1777795957/xelnova/products/a2k5bbb8zh3yisiauino.jpg" alt="Smart Insoles for Apple AirTag">
+          </div>
+          <div class="product-info">
+            <h3>Smart Insoles for Apple AirTag</h3>
+            <a class="buy-now" href="https://www.xelnova.in/products/smart-insoles-for-apple-airtag-anti-lost-shoe-inserts-for-kids-adults-adjustable-size-compatible-with-airtag-ms0fvbci" target="_blank" rel="noopener">Buy Now</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://res.cloudinary.com/dgulzkcnq/image/upload/v1777890971/xelnova/products/p3fjlpi3vhlpvmwik7mb.jpg" alt="Ice Bowl for Face">
+          </div>
+          <div class="product-info">
+            <h3>Ice Bowl for Face</h3>
+            <a class="buy-now" href="https://www.xelnova.in/products/ice-bowl-for-face-foldable-silicone-face-dipping-bowl-mrnmmf7n" target="_blank" rel="noopener">Buy Now</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://res.cloudinary.com/dgulzkcnq/image/upload/v1780573930/xelnova/products/rxqzfyyzfpn6bkrgmhxh.webp" alt="Sahasra 64GB USB 3.0 Pen Drive">
+          </div>
+          <div class="product-info">
+            <h3>Sahasra 64GB USB 3.0 Pen Drive</h3>
+            <a class="buy-now" href="https://www.xelnova.in/products/sahasra-64-gb-usb-3-0-flash-drive-pendrive-5y-warranty" target="_blank" rel="noopener">Buy Now</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://res.cloudinary.com/dgulzkcnq/image/upload/v1780254287/xelnova/products/hzeyyadykxyjzqymxlmo.jpg" alt="Somany Thistle Plus Angle Valve">
+          </div>
+          <div class="product-info">
+            <h3>Somany Thistle Plus Angle Valve</h3>
+            <a class="buy-now" href="https://www.xelnova.in/products/somany-thistle-plus-angle-valve-mqdi75ld" target="_blank" rel="noopener">Buy Now</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">
+            <img src="https://res.cloudinary.com/dgulzkcnq/image/upload/v1784801550/xelnova/products/obsaeoqi6cwglwbpoyva.webp" alt="Mini Portable Thermal Printer">
+          </div>
+          <div class="product-info">
+            <h3>Mini Portable Thermal Printer</h3>
+            <a class="buy-now" href="https://www.xelnova.in/products/mini-portable-pocket-printer-with-usb-cable-inkless-instant-printing-thermal-printer-for-note-photo-web-document-printing-bluetooth-printer-for-android-or-ios" target="_blank" rel="noopener">Buy Now</a>
+          </div>
+        </div>
+
+        <!-- duplicate set for seamless loop -->
+        <div class="product-card">
+          <div class="product-img">
+            <img src="<img 
+  src="https://www.xelnova.in/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdgulzkcnq%2Fimage%2Fupload%2Fv1777795957%2Fxelnova%2Fproducts%2Fa2k5bbb8zh3yisiauino.jpg&w=640&q=75" 
+  alt="Xelnova Product Image"
+>" alt="Smart Insoles for Apple AirTag">
+          </div>
+          <div class="product-info">
+            <h3>Smart Insoles for Apple AirTag</h3>
+            <a class="buy-now" href="https://www.xelnova.in/products/smart-insoles-for-apple-airtag-anti-lost-shoe-inserts-for-kids-adults-adjustable-size-compatible-with-airtag-ms0fvbci" target="_blank" rel="noopener">Buy Now</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">
+            <img src="<img 
+  src="https://www.xelnova.in/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdgulzkcnq%2Fimage%2Fupload%2Fv1777890971%2Fxelnova%2Fproducts%2Fp3fjlpi3vhlpvmwik7mb.jpg&w=640&q=75" 
+  alt="Xelnova Product Image"
+>" alt="Ice Bowl for Face">
+          </div>
+          <div class="product-info">
+            <h3>Ice Bowl for Face</h3>
+            <a class="buy-now" href="https://www.xelnova.in/products/ice-bowl-for-face-foldable-silicone-face-dipping-bowl-mrnmmf7n" target="_blank" rel="noopener">Buy Now</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">
+            <img src="<img 
+  src="https://res.cloudinary.com/dgulzkcnq/image/upload/v1780573930/xelnova/products/rxqzfyyzfpn6bkrgmhxh.webp" 
+  alt="Xelnova Product Image"
+>" alt="Sahasra 64GB USB 3.0 Pen Drive">
+          </div>
+          <div class="product-info">
+            <h3>Sahasra 64GB USB 3.0 Pen Drive</h3>
+            <a class="buy-now" href="https://www.xelnova.in/products/sahasra-64-gb-usb-3-0-flash-drive-pendrive-5y-warranty" target="_blank" rel="noopener">Buy Now</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">
+            <img src="<img 
+  src="https://res.cloudinary.com/dgulzkcnq/image/upload/v1780254287/xelnova/products/hzeyyadykxyjzqymxlmo.jpg" 
+  alt="Xelnova Product Image"
+  style="width:100%; max-width:640px; height:auto;"
+>" alt="Somany Thistle Plus Angle Valve">
+          </div>
+          <div class="product-info">
+            <h3>Somany Thistle Plus Angle Valve</h3>
+            <a class="buy-now" href="https://www.xelnova.in/products/somany-thistle-plus-angle-valve-mqdi75ld" target="_blank" rel="noopener">Buy Now</a>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-img">
+            <img src="<img 
+  src="https://www.xelnova.in/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdgulzkcnq%2Fimage%2Fupload%2Fv1784801550%2Fxelnova%2Fproducts%2Fobsaeoqi6cwglwbpoyva.webp&w=640&q=75" 
+  alt="Xelnova Product Image"
+>" alt="Mini Portable Thermal Printer">
+          </div>
+          <div class="product-info">
+            <h3>Mini Portable Thermal Printer</h3>
+            <a class="buy-now" href="https://www.xelnova.in/products/mini-portable-pocket-printer-with-usb-cable-inkless-instant-printing-thermal-printer-for-note-photo-web-document-printing-bluetooth-printer-for-android-or-ios" target="_blank" rel="noopener">Buy Now</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="slider-controls">
+        <button class="slider-btn" id="sliderPrev" aria-label="Previous">&#8592;</button>
+        <button class="slider-btn" id="sliderNext" aria-label="Next">&#8594;</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Customer Reviews</div>
+      <h2>What shoppers are saying</h2>
+      <p>Real feedback from people who've shopped on Xelnova.</p>
+    </div>
+    <div class="slider-shell">
+      <div class="review-track" id="reviewSlider">
+
+        <div class="review-card">
+          <div class="review-quote">&#8220;</div>
+          <p class="review-text">Great shopping experience! Easy to browse and good product quality.</p>
+          <div class="review-person">
+            <div class="review-avatar">RS</div>
+            <div><div class="review-name">Rahul Sharma</div><div class="review-role">Xelnova Customer</div></div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-quote">&#8220;</div>
+          <p class="review-text">Really happy with my purchase. The product matched the description.</p>
+          <div class="review-person">
+            <div class="review-avatar">PM</div>
+            <div><div class="review-name">Priya Mehta</div><div class="review-role">Xelnova Customer</div></div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-quote">&#8220;</div>
+          <p class="review-text">Good experience with Xelnova. Smooth ordering and quality product.</p>
+          <div class="review-person">
+            <div class="review-avatar">AV</div>
+            <div><div class="review-name">Amit Verma</div><div class="review-role">Xelnova Customer</div></div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-quote">&#8220;</div>
+          <p class="review-text">Nice variety of products. Found what I was looking for.</p>
+          <div class="review-person">
+            <div class="review-avatar">NK</div>
+            <div><div class="review-name">Neha Kapoor</div><div class="review-role">Xelnova Customer</div></div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-quote">&#8220;</div>
+          <p class="review-text">Satisfied with my order. Good quality and convenient shopping.</p>
+          <div class="review-person">
+            <div class="review-avatar">AM</div>
+            <div><div class="review-name">Arjun Malhotra</div><div class="review-role">Xelnova Customer</div></div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-quote">&#8220;</div>
+          <p class="review-text">Easy and convenient shopping experience. Would shop again.</p>
+          <div class="review-person">
+            <div class="review-avatar">SG</div>
+            <div><div class="review-name">Sneha Gupta</div><div class="review-role">Xelnova Customer</div></div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-quote">&#8220;</div>
+          <p class="review-text">Good product quality and a smooth overall experience.</p>
+          <div class="review-person">
+            <div class="review-avatar">RS</div>
+            <div><div class="review-name">Rohit Singh</div><div class="review-role">Xelnova Customer</div></div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-quote">&#8220;</div>
+          <p class="review-text">Happy with my purchase. The product met my expectations.</p>
+          <div class="review-person">
+            <div class="review-avatar">AS</div>
+            <div><div class="review-name">Ananya Sharma</div><div class="review-role">Xelnova Customer</div></div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-quote">&#8220;</div>
+          <p class="review-text">Good selection of products and a convenient shopping experience.</p>
+          <div class="review-person">
+            <div class="review-avatar">KJ</div>
+            <div><div class="review-name">Karan Joshi</div><div class="review-role">Xelnova Customer</div></div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-quote">&#8220;</div>
+          <p class="review-text">Nice experience with Xelnova. The order arrived properly packed.</p>
+          <div class="review-person">
+            <div class="review-avatar">PA</div>
+            <div><div class="review-name">Pooja Agarwal</div><div class="review-role">Xelnova Customer</div></div>
+          </div>
+        </div>
+
+        <!-- duplicate set for seamless loop -->
+        <div class="review-card">
+          <div class="review-quote">&#8220;</div>
+          <p class="review-text">Great shopping experience! Easy to browse and good product quality.</p>
+          <div class="review-person">
+            <div class="review-avatar">RS</div>
+            <div><div class="review-name">Rahul Sharma</div><div class="review-role">Xelnova Customer</div></div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-quote">&#8220;</div>
+          <p class="review-text">Really happy with my purchase. The product matched the description.</p>
+          <div class="review-person">
+            <div class="review-avatar">PM</div>
+            <div><div class="review-name">Priya Mehta</div><div class="review-role">Xelnova Customer</div></div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-quote">&#8220;</div>
+          <p class="review-text">Good experience with Xelnova. Smooth ordering and quality product.</p>
+          <div class="review-person">
+            <div class="review-avatar">AV</div>
+            <div><div class="review-name">Amit Verma</div><div class="review-role">Xelnova Customer</div></div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-quote">&#8220;</div>
+          <p class="review-text">Nice variety of products. Found what I was looking for.</p>
+          <div class="review-person">
+            <div class="review-avatar">NK</div>
+            <div><div class="review-name">Neha Kapoor</div><div class="review-role">Xelnova Customer</div></div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-quote">&#8220;</div>
+          <p class="review-text">Satisfied with my order. Good quality and convenient shopping.</p>
+          <div class="review-person">
+            <div class="review-avatar">AM</div>
+            <div><div class="review-name">Arjun Malhotra</div><div class="review-role">Xelnova Customer</div></div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-quote">&#8220;</div>
+          <p class="review-text">Easy and convenient shopping experience. Would shop again.</p>
+          <div class="review-person">
+            <div class="review-avatar">SG</div>
+            <div><div class="review-name">Sneha Gupta</div><div class="review-role">Xelnova Customer</div></div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-quote">&#8220;</div>
+          <p class="review-text">Good product quality and a smooth overall experience.</p>
+          <div class="review-person">
+            <div class="review-avatar">RS</div>
+            <div><div class="review-name">Rohit Singh</div><div class="review-role">Xelnova Customer</div></div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-quote">&#8220;</div>
+          <p class="review-text">Happy with my purchase. The product met my expectations.</p>
+          <div class="review-person">
+            <div class="review-avatar">AS</div>
+            <div><div class="review-name">Ananya Sharma</div><div class="review-role">Xelnova Customer</div></div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-quote">&#8220;</div>
+          <p class="review-text">Good selection of products and a convenient shopping experience.</p>
+          <div class="review-person">
+            <div class="review-avatar">KJ</div>
+            <div><div class="review-name">Karan Joshi</div><div class="review-role">Xelnova Customer</div></div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-quote">&#8220;</div>
+          <p class="review-text">Nice experience with Xelnova. The order arrived properly packed.</p>
+          <div class="review-person">
+            <div class="review-avatar">PA</div>
+            <div><div class="review-name">Pooja Agarwal</div><div class="review-role">Xelnova Customer</div></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <div class="why-grid">
+      <div class="why-copy">
+        <div class="kicker">Why Choose a Multi-Category Platform?</div>
+        <h2 style="font-size:30px;font-weight:800;margin-bottom:18px;letter-spacing:-0.02em;">More flexibility, fewer limits</h2>
+        <p>A multi-category platform can make product discovery more convenient because customers do not have to restrict their shopping journey to a single type of product.</p>
+        <p>People's requirements change throughout the year. A student may need stationery and electronic accessories, a professional may need office products, while a family may be looking for home and kitchen essentials. A broader marketplace can accommodate these different requirements.</p>
+      </div>
+      <div class="why-card">
+        <h4>How to Shop Smarter on Xelnova</h4>
+        <p>A better online shopping experience starts with understanding what you actually need. For electronics, check compatibility and specifications. For fashion products, consider size, material, and design. For home products, dimensions, construction, and functionality may be important.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <div class="kicker" style="color:var(--gold);">Final Thoughts</div>
+    <h2>About Xelnova</h2>
+    <p>Xelnova can be understood as a multi-category online shopping platform where customers can explore products across electronics, fashion, home and kitchen, beauty and personal care, health and wellness, office and stationery, home improvement, and several other categories.</p>
+    <p>The Xelnova Marketplace provides a broader product-discovery experience by bringing different categories together in one online destination.</p>
+    <a href="#categories" class="btn-primary">Start Exploring</a>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">Xel<span>nova</span></div>
+        <p>India's premium marketplace for quality products. Discover authentic brands, unbeatable deals, and fast delivery.</p>
+        <div class="social-row">
+          <a class="social-icon" href="https://www.instagram.com/xelnova.in?igsh=MW1hZ2h0djl2Z3RoYg%3D%3D&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2c2.7 0 3.06.01 4.12.06 1.06.05 1.79.22 2.43.47.66.26 1.22.6 1.77 1.15.55.55.9 1.11 1.15 1.77.25.64.42 1.37.47 2.43.05 1.06.06 1.42.06 4.12s-.01 3.06-.06 4.12c-.05 1.06-.22 1.79-.47 2.43a4.9 4.9 0 0 1-1.15 1.77 4.9 4.9 0 0 1-1.77 1.15c-.64.25-1.37.42-2.43.47-1.06.05-1.42.06-4.12.06s-3.06-.01-4.12-.06c-1.06-.05-1.79-.22-2.43-.47a4.9 4.9 0 0 1-1.77-1.15 4.9 4.9 0 0 1-1.15-1.77c-.25-.64-.42-1.37-.47-2.43C2.01 15.06 2 14.7 2 12s.01-3.06.06-4.12c.05-1.06.22-1.79.47-2.43.26-.66.6-1.22 1.15-1.77A4.9 4.9 0 0 1 5.45.53C6.09.28 6.82.11 7.88.06 8.94.01 9.3 0 12 0zm0 5.35A6.65 6.65 0 1 0 12 18.65 6.65 6.65 0 0 0 12 5.35zm0 10.97A4.32 4.32 0 1 1 12 7.68a4.32 4.32 0 0 1 0 8.64zm6.9-11.22a1.55 1.55 0 1 1-3.1 0 1.55 1.55 0 0 1 3.1 0z"/></svg>
+          </a>
+          <a class="social-icon" href="https://www.facebook.com/share/1CjnNcdhTH/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg>
+          </a>
+          <a class="social-icon" href="https://youtube.com/@xelnovaofficial?si=PQFBx0hR806zOzWU" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg viewBox="0 0 24 24"><path d="M23.5 6.5s-.23-1.64-.94-2.36c-.9-.94-1.9-.95-2.36-1C16.9 3 12 3 12 3h-.01s-4.89 0-8.2.14c-.46.05-1.46.06-2.36 1C.73 4.86.5 6.5.5 6.5S.26 8.42.26 10.35v1.3c0 1.93.24 3.85.24 3.85s.23 1.64.94 2.36c.9.94 2.08.91 2.6 1.01 1.9.18 8.06.24 8.06.24s4.9-.01 8.2-.15c.46-.06 1.46-.07 2.36-1.01.71-.72.94-2.36.94-2.36s.24-1.92.24-3.85v-1.3c0-1.93-.24-3.85-.24-3.85zM9.6 14.6V8.4l6.2 3.1-6.2 3.1z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li class="contact-row">support@xelnova.in</li>
+          <li class="contact-row">+91 9259131155</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Address</h4>
+        <ul>
+          <li>Xelnova Private Limited, 122/1, Pole No - New Line, Sector No. 28, Bamnoli, Dwarka, New Delhi - 110077</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Xelnova Private Limited. All rights reserved.</span>
+      <span>India's premium marketplace for quality products.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function setupMarquee(el, speed, reverse){
+    if(!el) return;
+    let paused = false;
+    let dragging = false;
+    let startX = 0, startScroll = 0;
+
+    el.addEventListener('mouseenter', () => paused = true);
+    el.addEventListener('mouseleave', () => { paused = false; dragging = false; });
+    el.addEventListener('touchstart', () => paused = true, {passive:true});
+    el.addEventListener('touchend', () => setTimeout(() => paused = false, 1800), {passive:true});
+
+    el.addEventListener('mousedown', (e) => {
+      dragging = true; el.style.cursor = 'grabbing';
+      startX = e.pageX; startScroll = el.scrollLeft;
+    });
+    window.addEventListener('mouseup', () => { dragging = false; el.style.cursor = 'grab'; });
+    el.addEventListener('mousemove', (e) => {
+      if(!dragging) return;
+      el.scrollLeft = startScroll - (e.pageX - startX);
+    });
+
+    function tick(){
+      if(!paused && !dragging){
+        el.scrollLeft += reverse ? -speed : speed;
+        const half = el.scrollWidth / 2;
+        if(el.scrollLeft >= half) el.scrollLeft -= half;
+        if(el.scrollLeft <= 0) el.scrollLeft += half;
+      }
+      requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  const productTrack = document.getElementById('productSlider');
+  const reviewTrack = document.getElementById('reviewSlider');
+  setupMarquee(productTrack, 0.6, false);
+  setupMarquee(reviewTrack, 0.5, true);
+
+  const prevBtn = document.getElementById('sliderPrev');
+  const nextBtn = document.getElementById('sliderNext');
+  if(productTrack && prevBtn && nextBtn){
+    const scrollAmount = () => productTrack.querySelector('.product-card').offsetWidth + 22;
+    prevBtn.addEventListener('click', () => productTrack.scrollBy({left:-scrollAmount(), behavior:'smooth'}));
+    nextBtn.addEventListener('click', () => productTrack.scrollBy({left:scrollAmount(), behavior:'smooth'}));
+  }
+</script>
+</body>
+</html>
